@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Excluir conta — Kolekta</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #F7F6F3;
+      color: #1C1917;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 16px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 2px 16px rgba(99, 102, 241, 0.08);
+      border-left: 4px solid #6366F1;
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      color: #6366F1;
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1C1917;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #44403C;
+      margin: 28px 0 10px;
+    }
+    p, li {
+      font-size: 15px;
+      line-height: 1.65;
+      color: #44403C;
+    }
+    ol, ul { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+    .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .badge-delete { background: #FEE2E2; color: #991B1B; }
+    .badge-keep   { background: #FEF3C7; color: #B45309; }
+    .data-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    .data-table th {
+      text-align: left;
+      font-size: 12px;
+      font-weight: 700;
+      color: #78716C;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 8px 12px;
+      background: #F7F6F3;
+      border-radius: 4px;
+    }
+    .data-table td {
+      padding: 10px 12px;
+      font-size: 14px;
+      border-bottom: 1px solid #E8E6E3;
+      vertical-align: top;
+    }
+    .data-table tr:last-child td { border-bottom: none; }
+    .contact-box {
+      background: #EEF2FF;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-top: 28px;
+    }
+    .contact-box a { color: #6366F1; font-weight: 600; }
+    .divider { height: 1px; background: #E8E6E3; margin: 24px 0; }
+    footer { margin-top: 32px; font-size: 13px; color: #A8A29E; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">Kolekta</div>
+    <h1>Solicitação de exclusão de conta</h1>
+
+    <p>
+      Você pode solicitar a exclusão da sua conta e de todos os dados associados
+      diretamente pelo aplicativo ou pelo e-mail de contato abaixo.
+    </p>
+
+    <h2>Como excluir sua conta pelo app</h2>
+    <ol>
+      <li>Abra o aplicativo <strong>Kolekta</strong> no seu dispositivo.</li>
+      <li>Na aba <strong>Álbuns</strong>, toque em <strong>Sair</strong> e depois em <strong>Excluir conta</strong>.</li>
+      <li>Confirme a exclusão na caixa de diálogo.</li>
+      <li>Sua conta e todos os seus dados serão removidos imediatamente.</li>
+    </ol>
+
+    <div class="divider"></div>
+
+    <h2>Dados que são excluídos</h2>
+    <table class="data-table">
+      <tr>
+        <th>Dado</th>
+        <th>Ação</th>
+        <th>Prazo</th>
+      </tr>
+      <tr>
+        <td>Conta de autenticação (e-mail)</td>
+        <td><span class="badge badge-delete">Excluído</span></td>
+        <td>Imediato</td>
+      </tr>
+      <tr>
+        <td>Perfil público (nome, localização)</td>
+        <td><span class="badge badge-delete">Excluído</span></td>
+        <td>Imediato</td>
+      </tr>
+      <tr>
+        <td>Coleção de figurinhas</td>
+        <td><span class="badge badge-delete">Excluído</span></td>
+        <td>Imediato</td>
+      </tr>
+      <tr>
+        <td>Mensagens e propostas de troca</td>
+        <td><span class="badge badge-delete">Excluído</span></td>
+        <td>Imediato</td>
+      </tr>
+      <tr>
+        <td>Token de notificação push</td>
+        <td><span class="badge badge-delete">Excluído</span></td>
+        <td>Imediato</td>
+      </tr>
+      <tr>
+        <td>Dados locais no dispositivo</td>
+        <td><span class="badge badge-keep">Removido ao desinstalar</span></td>
+        <td>Ao desinstalar o app</td>
+      </tr>
+    </table>
+
+    <div class="divider"></div>
+
+    <div class="contact-box">
+      <strong>Preferir enviar por e-mail?</strong><br />
+      Envie uma mensagem para <a href="mailto:jbfulgencio@gmail.com">jbfulgencio@gmail.com</a>
+      com o assunto <em>"Exclusão de conta Kolekta"</em> e o e-mail da conta que deseja excluir.
+      Processamos a solicitação em até <strong>7 dias úteis</strong>.
+    </div>
+  </div>
+
+  <footer>Kolekta · <a href="mailto:jbfulgencio@gmail.com" style="color:#A8A29E">jbfulgencio@gmail.com</a></footer>
+</body>
+</html>
