@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kolekta — Support</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #F7F6F3;
+      color: #1C1917;
+      line-height: 1.6;
+    }
+    header {
+      background: #6366F1;
+      color: #fff;
+      padding: 48px 24px 32px;
+      text-align: center;
+    }
+    header .icon { font-size: 56px; }
+    header h1 { font-size: 32px; font-weight: 800; margin-top: 8px; }
+    header p { font-size: 16px; opacity: 0.85; margin-top: 4px; }
+    .lang-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .lang-toggle button {
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: #fff;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .lang-toggle button.active { background: #fff; color: #6366F1; }
+    main { max-width: 680px; margin: 0 auto; padding: 32px 20px 64px; }
+    .contact-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 32px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .contact-card h2 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .contact-card p { font-size: 14px; color: #78716C; margin-bottom: 16px; }
+    .contact-card a {
+      display: inline-block;
+      background: #6366F1;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+    }
+    h2.section { font-size: 20px; font-weight: 700; margin-bottom: 16px; color: #1C1917; }
+    .faq { display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .faq-item summary {
+      padding: 16px 20px;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-item summary::after { content: '▾'; color: #6366F1; font-size: 14px; }
+    .faq-item[open] summary::after { content: '▴'; }
+    .faq-item p {
+      padding: 0 20px 16px;
+      font-size: 14px;
+      color: #44403C;
+    }
+    .lang { display: none; }
+    .lang.active { display: block; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: #A8A29E;
+    }
+    footer a { color: #6366F1; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="icon">📒</div>
+  <h1>Kolekta</h1>
+  <p>Sticker Album Tracker</p>
+  <div class="lang-toggle">
+    <button class="active" onclick="setLang('en')">English</button>
+    <button onclick="setLang('pt')">Português</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ENGLISH -->
+  <div class="lang active" id="lang-en">
+    <div class="contact-card">
+      <h2>Need help?</h2>
+      <p>Send us an email and we'll get back to you as soon as possible.</p>
+      <a href="mailto:jbfulgencio@gmail.com">Contact Support</a>
+    </div>
+
+    <h2 class="section">Frequently Asked Questions</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>My stickers disappeared after reinstalling the app</summary>
+        <p>Your collection is saved in the cloud. Simply close and reopen the app with an internet connection — it will restore automatically. If it doesn't, sign out and sign back in.</p>
+      </details>
+      <details class="faq-item">
+        <summary>I'm not appearing in the Discover tab</summary>
+        <p>Make sure "Appear in Discover" is enabled in the Discover tab. You also need to have at least one album registered and allow location access when prompted.</p>
+      </details>
+      <details class="faq-item">
+        <summary>The scanner isn't detecting my stickers</summary>
+        <p>Make sure the sticker number is clearly visible and well lit. Hold the camera steady and frame the corner number inside the target area. Avoid glare and shadows.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do colored borders work?</summary>
+        <p>Colored borders mark duplicate stickers that are available for trading. When adding a duplicate, choose a border color to categorize it. Use the "Available" filter to see all your tradeable stickers at once.</p>
+      </details>
+      <details class="faq-item">
+        <summary>I forgot my password</summary>
+        <p>On the login screen, tap "Forgot my password" and enter your email. You'll receive a link to reset it. You can also use the "No password" tab to sign in with a magic link instead.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do I delete my account?</summary>
+        <p>Tap the profile icon (👤) on the Albums screen, then select "Delete account". This will permanently remove all your data and cannot be undone.</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- PORTUGUÊS -->
+  <div class="lang" id="lang-pt">
+    <div class="contact-card">
+      <h2>Precisa de ajuda?</h2>
+      <p>Envie um email e responderemos o mais rápido possível.</p>
+      <a href="mailto:jbfulgencio@gmail.com">Contatar Suporte</a>
+    </div>
+
+    <h2 class="section">Perguntas Frequentes</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>Minhas figurinhas sumiram após reinstalar o app</summary>
+        <p>Sua coleção fica salva na nuvem. Feche e reabra o app com conexão à internet — ela será restaurada automaticamente. Se não funcionar, saia da conta e entre novamente.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Não estou aparecendo na aba Descobrir</summary>
+        <p>Verifique se a opção "Aparecer no Descobrir" está ativada na aba Descobrir. Você também precisa ter pelo menos um álbum cadastrado e ter permitido o acesso à localização.</p>
+      </details>
+      <details class="faq-item">
+        <summary>O scanner não está detectando minhas figurinhas</summary>
+        <p>Certifique-se de que o número da figurinha está visível e bem iluminado. Segure a câmera firme e enquadre o número no canto dentro da área de mira. Evite reflexos e sombras.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Como funcionam as bordas coloridas?</summary>
+        <p>As bordas coloridas marcam figurinhas repetidas disponíveis para troca. Ao adicionar uma repetida, escolha uma cor de borda para categorizá-la. Use o filtro "Disponíveis" para ver todas as suas figurinhas para troca de uma vez.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Esqueci minha senha</summary>
+        <p>Na tela de login, toque em "Esqueci minha senha" e informe seu email. Você receberá um link para redefinir. Você também pode usar a aba "Sem senha" para entrar com um link mágico.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Como excluir minha conta?</summary>
+        <p>Toque no ícone de perfil (👤) na tela de Álbuns e selecione "Excluir conta". Isso removerá permanentemente todos os seus dados e não poderá ser desfeito.</p>
+      </details>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <a href="https://jbfulgencio.github.io/kolekta-privacy">Privacy Policy</a>
+  &nbsp;·&nbsp;
+  © 2026 Kolekta
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-toggle button').forEach((btn, i) => {
+      btn.classList.toggle('active', (lang === 'en' && i === 0) || (lang === 'pt' && i === 1));
+    });
+  }
+</script>
+
+</body>
+</html>
